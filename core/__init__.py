@@ -2,6 +2,7 @@ import pandas as pd
 from core.tools import countdown
 
 
+# make a general spin set class
 class SpinSet:
     def __init__(self, min_rpm, max_rpm, rpe, minutes, seconds):
         # store the variables
@@ -31,7 +32,6 @@ class SpinCoach:
                              row['minutes'], row['seconds']) for index, row in df.iterrows()]
 
     # make a function that tells you to do an entire workout (from sets)
-
     def coach(self):
         # iterate over all the sets
         for spinset in self.sets:
